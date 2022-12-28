@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blueviolet;
+    height: 100vh;
+}
+
+.top_design{
+    max-width: 15vw;
+    max-height: 30vh;
+    background: radial-gradient(circle, red,purple, rgb(135, 159, 135), blue);
+    width: 15vw;
+    height: 30vh;
+    border-radius: 50%;
+    position: absolute;
+    top: 3vh;
+    left: 3vw;
+
+}
+
+.bottom_design{
+    max-width: 15vw;
+    max-height: 30vh;
+    background: radial-gradient(circle, yellow, grey, blue);
+    width: 15vw;
+    height: 30vh;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+}
+
+.calculator{
+    max-width: 70vw;
+    width: 25vw;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%)
+
+}
+
+.calculator .screen{
+    min-height: 10vh;
+    background-color: bisque;
+    max-width: 85%;
+    margin: auto;
+    display: grid;
+    place-items: end;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.calculator .buttons{
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+
+
+.calculator .buttons ~ button{
+   background-color: red;
+   border: none;
+   padding: .5rem;
+   color: #fff;
+   max-width: 85%;
+   min-width: 85%;
+}
+
+.calculator .buttons button{
+    width: 5vw;
+    padding: 1rem;
+}
+
+@media (max-width:768px) {
+    .top_design, .bottom_design{
+        max-width: 36vw;
+        max-height: 30vh;
+        width: 36vw;
+        height: 30vh;
+        border-radius: 50%;
+    }
+
+    .calculator{
+        max-width: 100vw;
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%)
+    
+    }
+
+    .calculator .buttons ~ button, .calculator .screen{
+        max-width: 100%;
+        min-width: 100%;
+     }
+
+    
+}
